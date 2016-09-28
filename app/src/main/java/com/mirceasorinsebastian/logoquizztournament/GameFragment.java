@@ -45,6 +45,8 @@ public class GameFragment extends Fragment {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
 
+    GameStats gameStats;
+
     public GameFragment() {
         // Required empty public constructor
     }
@@ -53,6 +55,8 @@ public class GameFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        gameStats = (GameStats) getArguments().getSerializable(GameStats.EXTRA);
     }
 
     @Override
@@ -129,7 +133,7 @@ public class GameFragment extends Fragment {
     }
 
     public Double crtValueTimer, crtPlayerTimer;
-    public static boolean canSubmit;
+    public  boolean canSubmit;
     public String crtPlayerResult;
 
     public void startQuizz() {
@@ -191,19 +195,21 @@ public class GameFragment extends Fragment {
         if(canSubmit)
             submitResult();
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference updatesFromDB = database.getReference("rooms/"+ crtRoomId);
+        if(gameStats.getIsGameRunning()) {
+            final FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference updatesFromDB = database.getReference("rooms/" + crtRoomId);
 
-        if(crtPlayerNumber == 1) {
-            updatesFromDB.child("PLAYER1_RESULT").setValue(crtPlayerResult);
-            HashMap key = new HashMap();
-            key.put("PLAYER1_STATUS", "done"); updatesFromDB.updateChildren(key, null);
-            key.put("PLAYER1_TIMER",  String.valueOf(crtPlayerTimer)); updatesFromDB.updateChildren(key, null);
-        } else {
-            updatesFromDB.child("PLAYER2_RESULT").setValue(crtPlayerResult);
-            HashMap key = new HashMap();
-            key.put("PLAYER2_STATUS", "done");  updatesFromDB.updateChildren(key, null);
-            key.put("PLAYER2_TIMER",  String.valueOf(crtPlayerTimer)); updatesFromDB.updateChildren(key, null);
+            if (crtPlayerNumber == 1) {
+                updatesFromDB.child("PLAYER1_RESULT").setValue(crtPlayerResult);
+                HashMap key = new HashMap();  key.put("PLAYER1_STATUS", "done");
+                updatesFromDB.updateChildren(key, null);  key.put("PLAYER1_TIMER", String.valueOf(crtPlayerTimer));
+                updatesFromDB.updateChildren(key, null);
+            } else {
+                updatesFromDB.child("PLAYER2_RESULT").setValue(crtPlayerResult);
+                HashMap key = new HashMap();  key.put("PLAYER2_STATUS", "done");
+                updatesFromDB.updateChildren(key, null);  key.put("PLAYER2_TIMER", String.valueOf(crtPlayerTimer));
+                updatesFromDB.updateChildren(key, null);
+            }
         }
     }
 

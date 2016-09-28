@@ -55,7 +55,7 @@ import java.util.HashMap;
 
 class GameStats implements Serializable {
     public static final String EXTRA = "com.mirceasorinsebastian.logoquizztournament";
-    private boolean isGameRunning = false;
+    private boolean isGameRunning;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -63,6 +63,7 @@ class GameStats implements Serializable {
 
     public void setIsGameRunning(Boolean status) {
         this.isGameRunning = status;
+        Log.i("setISGameRunning: ", "set");
     }
 
 }
@@ -100,6 +101,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         userStats = (UserStats) getIntent().getSerializableExtra(UserStats.EXTRA);
 
         gameStats = new GameStats();
+        Log.i("104: setIsGameRunning(False)", "yeap");
         gameStats.setIsGameRunning(false);
 
         gameLoadingFragment = new GameLoadingFragment();
@@ -141,6 +143,10 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
                 //If the user is currently in a room
                 if(crtRoomId.equals("Pending") || crtRoomId.equals("none")) {
                     Log.i("GameActivity status:", "User is NOT in a room");
+                    Log.i("146: setIsGameRunning(False)", "yeap");
+                    if(gameStats.getIsGameRunning())
+                        exitPlayer();
+
                     gameStats.setIsGameRunning(false);
                 } else {
                     if (!gameStats.getIsGameRunning()) {
@@ -201,6 +207,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
     public void quizzCoreCode(DataSnapshot dataSnapshot) throws IOException {
         Log.i("GameActivity - status: ", crtGAME_STATUS);
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
 
         PLAYER1_ID = dataSnapshot.child("PLAYER1_ID").getValue().toString();
         PLAYER2_ID = dataSnapshot.child("PLAYER2_ID").getValue().toString();
@@ -250,6 +257,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
         //STEP4: GAME IS FINISHED
         if(crtGAME_STATUS.equals("finished") && gameStats.getIsGameRunning()) {
+            Log.i("257: setIsGameRunning(False)", "yeap");
             gameStats.setIsGameRunning(false);
             String GAME_WINNER = dataSnapshot.child("GAME_WINNER").getValue().toString();
 
@@ -270,6 +278,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
                 database.getReference("rooms/" + crtRoomId + "/PLAYER2_STATUS").setValue("exited");
 
         }
+
+        //if((crtPlayerNumber == 1 && PLAYER1_STATUS.equals("exited")) || (crtPlayerNumber == 2 && PLAYER2_STATUS.equals("exited")))
+            //gameStats.setIsGameRunning(false);
     }
 
     //Download the QuizzImage from Firebase Storage
@@ -328,7 +339,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
     public void showGameUI() {
         Log.i("UI", "showGameUI - called");
         if(imageUri != null) {
-            Bundle b = new Bundle(); b.putString("imageUri", imageUri.toString());
+            Bundle b = new Bundle(); b.putString("imageUri", imageUri.toString()); b.putSerializable(GameStats.EXTRA, (Serializable) gameStats);
             gameFragment = new GameFragment();
             gameFragment.setArguments(b);
         }
@@ -359,17 +370,19 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
     public void exitPlayer() {
         Log.i("exitPlayer: ", "Player exited");
-        Log.i("crtRoomId: ", crtRoomId);
+        if(gameStats.getIsGameRunning()) {
+            Log.i("exitPlayer: ", "Really exiting");
+            final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        gameStats.setIsGameRunning(false);
+            DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
+            if(crtPlayerNumber == 1)
+                updatesFromDB.child("PLAYER1_STATUS").setValue("exited");
+            if(crtPlayerNumber == 2)
+                updatesFromDB.child("PLAYER2_STATUS").setValue("exited");
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-        DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-        if(crtPlayerNumber == 1)
-            updatesFromDB.child("PLAYER1_STATUS").setValue("exited");
-        if(crtPlayerNumber == 2)
-            updatesFromDB.child("PLAYER2_STATUS").setValue("exited");
+            Log.i("379: setIsGameRunning(False)", "yeap");
+            gameStats.setIsGameRunning(false);
+        }
     }
 
     public void updateTimeStap() {
@@ -395,6 +408,8 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.i("onDestroy:", "called");
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
         exitPlayer();
         stopUpdatingTimeStap();
     }
@@ -402,12 +417,16 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        Log.i("onBackPressed:", "called");
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
         exitPlayer();
         stopUpdatingTimeStap();
     }
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Log.i("onBackPressed:", "called");
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
         if ((keyCode == KeyEvent.KEYCODE_BACK)) {
             stopUpdatingTimeStap();
             exitPlayer();
@@ -419,29 +438,32 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
     public void onPause() {
         super.onPause();
         Log.i("pausePlayer: ", "Player paused");
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
+        if(gameStats.getIsGameRunning()) {
+            final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-        DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-        if(crtPlayerNumber == 1)
-            updatesFromDB.child("PLAYER1_FOCUS").setValue("unfocused");
-        if(crtPlayerNumber == 2)
-            updatesFromDB.child("PLAYER2_FOCUS").setValue("unfocused");
+            DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
+            if(crtPlayerNumber == 1)
+                updatesFromDB.child("PLAYER1_FOCUS").setValue("unfocused");
+            if(crtPlayerNumber == 2)
+                updatesFromDB.child("PLAYER2_FOCUS").setValue("unfocused");
+        }
     }
 
     @Override
     public void onResume() {
         super.onResume();
-
         Log.i("pausePlayer: ", "Player resumed");
+        Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
+        if(gameStats.getIsGameRunning()) {
+            final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-        DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-        if(crtPlayerNumber == 1)
-            updatesFromDB.child("PLAYER1_FOCUS").setValue("focused");
-        if(crtPlayerNumber == 2)
-            updatesFromDB.child("PLAYER2_FOCUS").setValue("focused");
+            DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
+            if(crtPlayerNumber == 1)
+                updatesFromDB.child("PLAYER1_FOCUS").setValue("focused");
+            if(crtPlayerNumber == 2)
+                updatesFromDB.child("PLAYER2_FOCUS").setValue("focused");
+        }
     }
 
 }
