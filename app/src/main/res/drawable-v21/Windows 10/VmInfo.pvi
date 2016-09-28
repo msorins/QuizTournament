@@ -1,0 +1,1308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VmInfo schemaVersion="1.0" dyn_lists="">
+   <GuestOsInformation dyn_lists="GuestToolsList 1">
+      <Started>0</Started>
+      <ConfOsType></ConfOsType>
+      <ConfOsVersion></ConfOsVersion>
+      <RealOsType>Microsoft Windows, 64bit, 4 cpu(s), page: 4096b</RealOsType>
+      <RealOsVersion>10.0.10240, </RealOsVersion>
+      <RealOsDetails>ServicePack: 0.0; SuiteMask: 0x100; ProductType: 1; ProductEdition: 48</RealOsDetails>
+      <GuestToolsList id="0" dyn_lists="GuestToolInfo 77">
+         <GuestToolInfo id="0" dyn_lists="">
+            <ToolId>parallels.TIS.host.cross</ToolId>
+            <ToolName>Tools Information Service host side</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.3</ToolInternalVersion>
+            <ToolDate>2016-09-13T15:47:18Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>dummy</ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="1" dyn_lists="">
+            <ToolId>parallels.ToolsInstallStage.guest.cross</ToolId>
+            <ToolName>Parallels Tools Installation stage</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-08-17T15:33:19Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData>03000000000000000000000000000000</ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="2" dyn_lists="">
+            <ToolId>parallels.toolgate.guest.win</ToolId>
+            <ToolName>PCI Toolgate device driver</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:22Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="3" dyn_lists="">
+            <ToolId>parallels.TimeSynchronization.guest.win.drv</ToolId>
+            <ToolName>Time synchronization driver</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:25Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="4" dyn_lists="">
+            <ToolId>parallels.UsbMouse.guest.win</ToolId>
+            <ToolName>Usb Mouse Synchronization Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:26Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="5" dyn_lists="">
+            <ToolId>parallels.VideoDevicesInfo.guest.cross</ToolId>
+            <ToolName>Guest video device detection</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData>02000000000000000000000000000000</ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="6" dyn_lists="">
+            <ToolId>parallels.ToolsInstallation.guest.win</ToolId>
+            <ToolName>ToolsInstallation</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData>020000000b0000000100000001000000387e0000</ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="7" dyn_lists="">
+            <ToolId>parallels.GracefulShutdown.guest.win</ToolId>
+            <ToolName>Graceful Shutdown tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.1</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData>0f000000</ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="8" dyn_lists="">
+            <ToolId>parallels.GuestOSInfo.guest.cross</ToolId>
+            <ToolName>Guest OS Information</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.1</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData>3c01000008000000400000000400000000100000000000000000000000000000180100000a000000000000000028000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001010030000000</ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="9" dyn_lists="">
+            <ToolId>parallels.IpRenew.guest.win</ToolId>
+            <ToolName>Tool for renewing IP address obtained through DHCP</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="10" dyn_lists="">
+            <ToolId>parallels.Antivirus.guest.win.norton</ToolId>
+            <ToolName></ToolName>
+            <ToolVersion>0.0.0.0</ToolVersion>
+            <ToolInternalVersion>0.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="11" dyn_lists="">
+            <ToolId>parallels.DesktopUtilitiesService.guest.win</ToolId>
+            <ToolName>Guest desktop utilities (service-side tool)</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="12" dyn_lists="">
+            <ToolId>parallels.Antivirus.guest.win.kaspersky</ToolId>
+            <ToolName></ToolName>
+            <ToolVersion>0.0.0.0</ToolVersion>
+            <ToolInternalVersion>0.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="13" dyn_lists="">
+            <ToolId>parallels.TimeSynchronization.guest.win</ToolId>
+            <ToolName>Time Synchronization tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.4</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="14" dyn_lists="">
+            <ToolId>parallels.Antivirus.guest.win.drweb</ToolId>
+            <ToolName></ToolName>
+            <ToolVersion>0.0.0.0</ToolVersion>
+            <ToolInternalVersion>0.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="15" dyn_lists="">
+            <ToolId>parallels.DynamicResolution.guest.win</ToolId>
+            <ToolName>Parallels Dynamic Resolution Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>started</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="16" dyn_lists="">
+            <ToolId>parallels.PrintingTool.guest.win.service</ToolId>
+            <ToolName>Printing Tool Service</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Loaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="17" dyn_lists="">
+            <ToolId>parallels.ModernMix.guest.win</ToolId>
+            <ToolName>ModernMix</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData>01000000ffffffff00000000000000000000000000000000</ToolData>
+            <ToolStringData>1.0</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="18" dyn_lists="">
+            <ToolId>parallels.UserInputEmulation.guest.cross.TextInput</ToolId>
+            <ToolName>User Input Emulation: TextInput</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="19" dyn_lists="">
+            <ToolId>parallels.UserInputEmulation.guest.cross.PointScroll</ToolId>
+            <ToolName>User Input Emulation: PointScroll</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="20" dyn_lists="">
+            <ToolId>parallels.UserInputEmulation.guest.cross.EdgeSwipes</ToolId>
+            <ToolName>User Input Emulation: EdgeSwipes</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="21" dyn_lists="">
+            <ToolId>parallels.UserInputEmulation.guest.win.plugin</ToolId>
+            <ToolName>User Input Emulation prl_cc plugin</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>2.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="22" dyn_lists="">
+            <ToolId>parallels.UserInputEmulation.guest.cross.Pax</ToolId>
+            <ToolName>User Input Emulation PAX support</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="23" dyn_lists="">
+            <ToolId>parallels.WindowsUpdate.guest.win</ToolId>
+            <ToolName>Windows Update service state</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:02:57Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData>00000000000000000000000000000000</ToolData>
+            <ToolStringData>(service idle)</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="24" dyn_lists="">
+            <ToolId>parallels.VmExec.guest.cross</ToolId>
+            <ToolName>VmExec</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="25" dyn_lists="">
+            <ToolId>parallels.CpuUsage.guest.win</ToolId>
+            <ToolName>prl_cpuusage tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:05Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="26" dyn_lists="">
+            <ToolId>parallels.IPChanges.guest.cross</ToolId>
+            <ToolName>IP Changes monitor</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:06Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="27" dyn_lists="">
+            <ToolId>parallels.OSEvaluation.guest.win</ToolId>
+            <ToolName></ToolName>
+            <ToolVersion>0.0.0.0</ToolVersion>
+            <ToolInternalVersion>0.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:34Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="28" dyn_lists="">
+            <ToolId>parallels.Antivirus.guest.win.thirdparty</ToolId>
+            <ToolName></ToolName>
+            <ToolVersion>0.0.0.0</ToolVersion>
+            <ToolInternalVersion>0.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:34Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>N/A</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="29" dyn_lists="">
+            <ToolId>parallels.SharedHostApps.guest.win.ShellExt2</ToolId>
+            <ToolName>Shared Host Applications Shell Extension</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T15:47:26Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="30" dyn_lists="">
+            <ToolId>parallels.SharedHostApps.guest.win.shellext</ToolId>
+            <ToolName>Shared Host Applications shell extension</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-08-13T07:29:54Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="31" dyn_lists="">
+            <ToolId>parallels.SFilter.guest.win</ToolId>
+            <ToolName>SFilter driver</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>0.2</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:24Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Loaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="32" dyn_lists="">
+            <ToolId>parallels.SFilter.guest.win.0x0</ToolId>
+            <ToolName>SFilter driver</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>0.2</ToolInternalVersion>
+            <ToolDate>2016-09-13T15:48:41Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Disabled</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="33" dyn_lists="">
+            <ToolId>parallels.SharedFolders.guest.win</ToolId>
+            <ToolName>Shared Folders file system driver</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>4.2</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:25Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>psfhost:Mac;</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="34" dyn_lists="">
+            <ToolId>parallels.SlidingMouse.guest.win</ToolId>
+            <ToolName>Mouse Synchronization Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:25Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="35" dyn_lists="">
+            <ToolId>parallels.UserProfileHelper.guest.win</ToolId>
+            <ToolName>User Profile Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>setting handler 0: success
+setting handler 1: success
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="36" dyn_lists="">
+            <ToolId>parallels.Coherence.guest.win</ToolId>
+            <ToolName>Parallels Coherence Service</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:28Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="37" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=1</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T18:14:48Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 4928(1340)
+CookieTool.dll(00007FFABB180000) started in 00.000 sec
+CopyPasteTool.dll(00007FFABB160000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB1E40000) started in 00.000 sec
+DragAndDrop.dll(00007FFAB52B0000) started in 00.000 sec
+FileSharing.dll(00007FFAB5290000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB4A20000) started in 00.000 sec
+IEPlugin.dll(00007FFAB4A00000) started in 00.000 sec
+LayoutSync.dll(00007FFAB49E0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB49C0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAA5530000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB20C0000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB2090000) started in 00.000 sec
+SharedProfile.dll(00007FFAB1F30000) started in 00.016 sec
+ShellInt.dll(00007FFAB1F10000) started in 00.047 sec
+VSDebug.dll(00007FFAB1850000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB13F0000) unloaded due to failed to start: err = -1, 00.000 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.141 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 55 min 14.360 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="38" dyn_lists="">
+            <ToolId>parallels.CookieTool.guest.win</ToolId>
+            <ToolName>Cookie Injector Tool prl_cc plugin</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="39" dyn_lists="">
+            <ToolId>parallels.CopyPasteTool.guest.win</ToolId>
+            <ToolName>Copy-paste tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="40" dyn_lists="">
+            <ToolId>parallels.DesktopUtilitiesUser.guest.win</ToolId>
+            <ToolName>Guest desktop utilities (user-side tool)</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="41" dyn_lists="">
+            <ToolId>parallels.DragDropTool.guest.win</ToolId>
+            <ToolName>Drag-and-drop tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="42" dyn_lists="">
+            <ToolId>parallels.GuestSharing.guest.win</ToolId>
+            <ToolName>Guest File System Sharing Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="43" dyn_lists="">
+            <ToolId>parallels.FullscreenMonitor.guest.win</ToolId>
+            <ToolName>Fullscreen Monitor prl_cc plugin</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="44" dyn_lists="">
+            <ToolId>parallels.PrintingTool.guest.win.plugin</ToolId>
+            <ToolName>Printing Tool prl_cc plugin</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="45" dyn_lists="">
+            <ToolId>parallels.LayoutSync.guest.win</ToolId>
+            <ToolName>Keyboard Layout Synchronization Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="46" dyn_lists="">
+            <ToolId>parallels.SharedGuestApps.guest.win.plugin</ToolId>
+            <ToolName>Shared Guest Applications prl_cc plugin</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="47" dyn_lists="">
+            <ToolId>parallels.SharedHostApps.guest.win.plugin</ToolId>
+            <ToolName>Shared Host Applications Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="48" dyn_lists="">
+            <ToolId>parallels.SIAUser.guest.win</ToolId>
+            <ToolName>Shared Internet Applications (user-side) Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>2.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="49" dyn_lists="">
+            <ToolId>parallels.SharedProfile.guest.win</ToolId>
+            <ToolName>Shared Profile tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="50" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=1</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T17:19:34Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 3328
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="51" dyn_lists="">
+            <ToolId>parallels.ShellInt.guest.win</ToolId>
+            <ToolName>Shell Integration tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData></ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="52" dyn_lists="">
+            <ToolId>parallels.VSDebug.guest.win.plugin</ToolId>
+            <ToolName>VSDebug Tool</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Unloaded</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="53" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=2</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T19:36:23Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 4216(1078)
+CookieTool.dll(00007FFAB9950000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB8A40000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB75C0000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB8A20000) started in 00.000 sec
+FileSharing.dll(00007FFAB86C0000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7D80000) started in 00.000 sec
+IEPlugin.dll(00007FFAB7900000) started in 00.015 sec
+LayoutSync.dll(00007FFAB7890000) started in 00.000 sec
+PrintingTool.dll(00007FFAB75A0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB4990000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5320000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB4560000) started in 00.000 sec
+SharedProfile.dll(00007FFAB7580000) started in 00.000 sec
+ShellInt.dll(00007FFAB7560000) started in 00.032 sec
+VSDebug.dll(00007FFAB5550000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB5300000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.016 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 48 min 08.203 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="54" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=2</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-03T18:48:16Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 1588
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="55" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=3</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-06T16:49:18Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 3796(ed4)
+CookieTool.dll(00007FFAB9D60000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB8720000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB4A90000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB78C0000) started in 00.000 sec
+FileSharing.dll(00007FFAB78A0000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB74C0000) started in 00.000 sec
+IEPlugin.dll(00007FFAB74A0000) started in 00.000 sec
+LayoutSync.dll(00007FFAB5760000) started in 00.000 sec
+PrintingTool.dll(00007FFAB5630000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAA54D0000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5600000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB5420000) started in 00.016 sec
+SharedProfile.dll(00007FFAB55E0000) started in 00.000 sec
+ShellInt.dll(00007FFAB5330000) started in 00.031 sec
+VSDebug.dll(00007FFAB4DB0000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB49F0000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 02 min 38.906 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="56" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=3</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-06T16:46:39Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 2584
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="57" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=4</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-07T13:36:55Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 4488(1188)
+CookieTool.dll(00007FFABA2C0000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB8A90000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB4020000) started in 00.000 sec
+DragAndDrop.dll(00007FFAB86B0000) started in 00.000 sec
+FileSharing.dll(00007FFAB7EA0000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7E80000) started in 00.000 sec
+IEPlugin.dll(00007FFAB78C0000) started in 00.000 sec
+LayoutSync.dll(00007FFAB78A0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB7530000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB3AF0000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB7500000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB4A40000) started in 00.000 sec
+SharedProfile.dll(00007FFAB74E0000) started in 00.000 sec
+ShellInt.dll(00007FFAB5450000) started in 00.047 sec
+VSDebug.dll(00007FFAB4000000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB3AD0000) unloaded due to failed to start: err = -1, 00.000 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.015 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 02 min 17.140 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="58" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=4</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-07T13:34:38Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 4516
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="59" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=5</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-08T19:03:08Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 5292(14ac)
+CookieTool.dll(00007FFABA2C0000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB9D60000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAAAC90000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB8A80000) started in 00.000 sec
+FileSharing.dll(00007FFAB7F90000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7DC0000) started in 00.000 sec
+IEPlugin.dll(00007FFAB7DA0000) started in 00.000 sec
+LayoutSync.dll(00007FFAB5550000) started in 00.000 sec
+PrintingTool.dll(00007FFAB5490000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB3FA0000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5460000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB4A60000) started in 00.016 sec
+SharedProfile.dll(00007FFAB4DB0000) started in 00.000 sec
+ShellInt.dll(00007FFAB4A40000) started in 00.046 sec
+VSDebug.dll(00007FFAB3F80000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB3AF0000) unloaded due to failed to start: err = -1, 00.000 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.016 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.109 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.016 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 07 min 27.703 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="60" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=5</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-08T18:53:10Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 2336
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="61" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=6</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-08T19:39:02Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 3592(e08)
+CookieTool.dll(00007FFAB9D60000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB8A80000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB41E0000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB86B0000) started in 00.000 sec
+FileSharing.dll(00007FFAB7F00000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7E70000) started in 00.000 sec
+IEPlugin.dll(00007FFAB7890000) started in 00.000 sec
+LayoutSync.dll(00007FFAB52B0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB5290000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB4010000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB4DC0000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB4A60000) started in 00.000 sec
+SharedProfile.dll(00007FFAB4A40000) started in 00.000 sec
+ShellInt.dll(00007FFAB49D0000) started in 00.078 sec
+VSDebug.dll(00007FFAB49B0000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB4990000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.015 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.016 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 32 min 27.000 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="62" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=6</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-08T19:39:02Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 5136
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="63" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=7</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-10T07:32:10Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 5824(16c0)
+CookieTool.dll(00007FFABA2C0000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB7EC0000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB3E30000) started in 00.000 sec
+DragAndDrop.dll(00007FFAB7890000) started in 00.000 sec
+FileSharing.dll(00007FFAB5760000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB5560000) started in 00.016 sec
+IEPlugin.dll(00007FFAB5490000) started in 00.000 sec
+LayoutSync.dll(00007FFAB5470000) started in 00.000 sec
+PrintingTool.dll(00007FFAB52B0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB3580000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5280000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB4A60000) started in 00.000 sec
+SharedProfile.dll(00007FFAB4E00000) started in 00.000 sec
+ShellInt.dll(00007FFAB4A40000) started in 00.047 sec
+VSDebug.dll(00007FFAB49D0000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB49B0000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 07 min 40.266 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="64" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=7</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-10T07:24:30Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 444
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="65" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=8</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-11T09:25:50Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 4720(1270)
+CookieTool.dll(00007FFABB180000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB7890000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB3EF0000) started in 00.000 sec
+DragAndDrop.dll(00007FFAB74D0000) started in 00.016 sec
+FileSharing.dll(00007FFAB74B0000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7490000) started in 00.000 sec
+IEPlugin.dll(00007FFAB5760000) started in 00.000 sec
+LayoutSync.dll(00007FFAB54F0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB5490000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB3E70000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5460000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB5320000) started in 00.000 sec
+SharedProfile.dll(00007FFAB5420000) started in 00.000 sec
+ShellInt.dll(00007FFAB4E90000) started in 00.078 sec
+VSDebug.dll(00007FFAB4E70000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB4E50000) unloaded due to failed to start: err = -1, 00.016 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.016 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 01h 04 min 30.141 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="66" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=8</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-11T08:21:20Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 5772
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="67" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=9</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-11T13:17:17Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 3684(e64)
+CookieTool.dll(00007FFAB8A60000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB8A40000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB4AD0000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB8A20000) started in 00.015 sec
+FileSharing.dll(00007FFAB7580000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB7560000) started in 00.000 sec
+IEPlugin.dll(00007FFAB74A0000) started in 00.016 sec
+LayoutSync.dll(00007FFAB5760000) started in 00.000 sec
+PrintingTool.dll(00007FFAB55A0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAACF30000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB5570000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB52A0000) started in 00.015 sec
+SharedProfile.dll(00007FFAB5550000) started in 00.016 sec
+ShellInt.dll(00007FFAB5280000) started in 00.188 sec
+VSDebug.dll(00007FFAB4E90000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB4E70000) unloaded due to failed to start: err = -1, 00.046 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.015 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.016 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 32.734 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="68" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=9</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-11T13:16:45Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 3532
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="69" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=10</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-12T16:02:28Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 5588(15d4)
+CookieTool.dll(00007FFAB99A0000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB7490000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB4040000) started in 00.016 sec
+DragAndDrop.dll(00007FFAB55A0000) started in 00.000 sec
+FileSharing.dll(00007FFAB5450000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB52B0000) started in 00.000 sec
+IEPlugin.dll(00007FFAB5290000) started in 00.000 sec
+LayoutSync.dll(00007FFAB4A70000) started in 00.000 sec
+PrintingTool.dll(00007FFAB4A50000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB0800000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB4560000) started in 00.015 sec
+SharedIntApp.dll(00007FFAB4530000) started in 00.000 sec
+SharedProfile.dll(00007FFAB4A30000) started in 00.000 sec
+ShellInt.dll(00007FFAB4020000) started in 00.031 sec
+VSDebug.dll(00007FFAB4000000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB07E0000) unloaded due to failed to start: err = -1, 00.016 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.015 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 01 min 22.234 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="70" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=10</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-12T16:01:06Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 4420
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="71" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=11</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-12T16:57:36Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 2724(aa4)
+CookieTool.dll(00007FFABB2F0000) started in 00.000 sec
+CopyPasteTool.dll(00007FFABB2D0000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB9D70000) started in 00.015 sec
+DragAndDrop.dll(00007FFABB2B0000) started in 00.000 sec
+FileSharing.dll(00007FFABB290000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFABB270000) started in 00.016 sec
+IEPlugin.dll(00007FFAB99B0000) started in 00.000 sec
+LayoutSync.dll(00007FFAB9440000) started in 00.000 sec
+PrintingTool.dll(00007FFAB9420000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB78D0000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB78A0000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB6B10000) started in 00.016 sec
+SharedProfile.dll(00007FFAB6AF0000) started in 00.000 sec
+ShellInt.dll(00007FFAB6AD0000) started in 00.015 sec
+VSDebug.dll(00007FFAB6AB0000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB6A90000) unloaded due to failed to start: err = -1, 00.016 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.016 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.140 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 55 min 03.906 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="72" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=11</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-12T16:02:32Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 4448
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="73" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=12</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T15:17:56Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 5320(14c8)
+CookieTool.dll(00007FFABB190000) started in 00.000 sec
+CopyPasteTool.dll(00007FFABAD80000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB68E0000) started in 00.000 sec
+DragAndDrop.dll(00007FFAB9E90000) started in 00.016 sec
+FileSharing.dll(00007FFAB9990000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB9970000) started in 00.000 sec
+IEPlugin.dll(00007FFAB86C0000) started in 00.000 sec
+LayoutSync.dll(00007FFAB99B0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB77D0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAB5530000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB77A0000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB68B0000) started in 00.016 sec
+SharedProfile.dll(00007FFAB7490000) started in 00.000 sec
+ShellInt.dll(00007FFAB5510000) started in 00.047 sec
+VSDebug.dll(00007FFAB54F0000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB5490000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.016 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.109 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.016 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 21 min 00.735 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="74" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=12</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T14:56:55Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 4804
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="75" dyn_lists="">
+            <ToolId>parallels.ControlCenter.guest.win.sesnId=13</ToolId>
+            <ToolName>Control Center</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T16:03:04Z</ToolDate>
+            <ToolState>2</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>Process 2112(840)
+CookieTool.dll(00007FFABAD90000) started in 00.000 sec
+CopyPasteTool.dll(00007FFAB9E80000) started in 00.000 sec
+DesktopUtilities.dll(00007FFAB3F80000) started in 00.015 sec
+DragAndDrop.dll(00007FFAB9DB0000) started in 00.016 sec
+FileSharing.dll(00007FFAB9D90000) started in 00.000 sec
+FullscreenMonitor.dll(00007FFAB8720000) started in 00.000 sec
+IEPlugin.dll(00007FFAB8700000) started in 00.016 sec
+LayoutSync.dll(00007FFAB86E0000) started in 00.000 sec
+PrintingTool.dll(00007FFAB77D0000) started in 00.000 sec
+SharedGuestApps.dll(00007FFAAC8B0000) started in 00.000 sec
+SharedHostApps.dll(00007FFAB77A0000) started in 00.000 sec
+SharedIntApp.dll(00007FFAB68B0000) started in 00.015 sec
+SharedProfile.dll(00007FFAB5510000) started in 00.000 sec
+ShellInt.dll(00007FFAB5490000) started in 00.110 sec
+VSDebug.dll(00007FFAB5470000) started in 00.000 sec
+WalkingMouse.dll(00007FFAB5450000) unloaded due to failed to start: err = -1, 00.015 sec
+VSDebug.dll stopped in 00.000 sec with 0 status
+ShellInt.dll stopped in 00.000 sec with 0 status
+SharedProfile.dll stopped in 00.000 sec with 0 status
+SharedIntApp.dll stopped in 00.000 sec with 0 status
+SharedHostApps.dll stopped in 00.000 sec with 0 status
+SharedGuestApps.dll stopped in 00.000 sec with 0 status
+PrintingTool.dll stopped in 00.000 sec with 0 status
+LayoutSync.dll stopped in 00.000 sec with 0 status
+IEPlugin.dll stopped in 00.000 sec with 0 status
+FullscreenMonitor.dll stopped in 00.000 sec with 0 status
+FileSharing.dll stopped in 00.125 sec with 0 status
+DragAndDrop.dll stopped in 00.000 sec with 0 status
+DesktopUtilities.dll stopped in 00.000 sec with 0 status
+CopyPasteTool.dll stopped in 00.000 sec with 0 status
+CookieTool.dll stopped in 00.000 sec with 0 status
+last action: finished, uptime: 15 min 36.843 sec
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+         <GuestToolInfo id="76" dyn_lists="">
+            <ToolId>parallels.ShellIntHelper.guest.win.sesnId=13</ToolId>
+            <ToolName>Shell Integration Helper</ToolName>
+            <ToolVersion>11.1.1-32312</ToolVersion>
+            <ToolInternalVersion>1.0</ToolInternalVersion>
+            <ToolDate>2016-09-13T15:47:28Z</ToolDate>
+            <ToolState>1</ToolState>
+            <ToolData></ToolData>
+            <ToolStringData>ProcessId: 2268
+</ToolStringData>
+            <ToolUpdateStatus>UpToDate</ToolUpdateStatus>
+         </GuestToolInfo>
+      </GuestToolsList>
+   </GuestOsInformation>
+   <AdvancedEngineInfo dyn_lists="">
+      <EngineTypeStr>KernelContext</EngineTypeStr>
+      <EngineTypeNum>2</EngineTypeNum>
+   </AdvancedEngineInfo>
+</VmInfo>

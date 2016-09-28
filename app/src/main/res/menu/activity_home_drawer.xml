@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/addQuizz"
+            android:icon="@drawable/glyphpicture"
+            android:title="Add quiz" />
+        <item android:title="Guide"
+            android:icon="@drawable/glyphdocument"
+            android:id="@+id/guide" />
+    </group>
+
+    <item android:title="Settings">
+        <menu>
+            <item android:title="Settings"
+                android:icon="@drawable/glyphconsettings"
+                android:id="@+id/settings" />
+        </menu>
+    </item>
+
+</menu>
