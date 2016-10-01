@@ -22,137 +22,178 @@
         android:layout_centerHorizontal="true"
         android:visibility="visible">
 
-        <ProgressBar
-            style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/timerProgressBar"
-            android:max="1000000"
-            android:visibility="visible"
-            android:progress="1000000"
-            android:layout_height="5dp"
-            android:layout_marginEnd="7dp"
-            android:layout_marginStart="7dp" />
+            android:layout_height="match_parent">
 
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_below="@+id/timerProgressBar"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_height="55dp"
-            android:id="@+id/statsCardView"
-            android:layout_marginEnd="7dp"
-            android:layout_marginStart="7dp">
-
-            <RelativeLayout
+            <ProgressBar
+                style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/timerProgressBar"
+                android:max="1000000"
+                android:visibility="visible"
+                android:progress="1000000"
+                android:layout_height="5dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginStart="7dp" />
 
-                <TextView
-                    android:text="20:00"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/timeLeftTextView"
-                    android:textSize="38sp"
-                    android:textColor="@color/colorAccent"
-                    android:elevation="24dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="35dp"
-                    android:layout_centerVertical="true"
-                    android:layout_centerHorizontal="true"
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_below="@+id/timerProgressBar"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_height="50dp"
+                android:id="@+id/statsCardView"
+                android:layout_marginEnd="7dp"
+                android:layout_marginStart="7dp">
 
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                     />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
+                    <TextView
+                        android:text="20:00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/timeLeftTextView"
+                        android:textSize="38sp"
+                        android:textColor="@color/colorAccent"
+                        android:elevation="24dp"
+                        android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                         />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/crtPlayerNameTextView"
+                        android:layout_weight="1"
+                        android:text="NumeleTau"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="42dp"
+                        android:layout_marginStart="42dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textStyle="bold"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:id="@+id/advPlayerNameTextView"
+                        android:layout_weight="1"
+                        android:text="NumeleAdv"
+                        android:gravity="center"
+                        android:layout_width="100dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginRight="50dp"
+                        android:layout_marginEnd="50dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/crtPlayerScoreTextView"
+                        android:layout_weight="1"
+                        android:text="0pc"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|end"
+                        android:paddingRight="15dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+
+                        android:textStyle="bold"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textAlignment="textStart"
+                        android:paddingStart="7dp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/advPlayerScoreTextView"
+                        android:layout_weight="1"
+                        android:text="0pc"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|start"
+                        android:textStyle="bold"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textAlignment="textEnd"
+                        android:paddingEnd="7dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_marginTop="32dp"
+                android:id="@+id/imageCardView"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/statsCardView"
+                android:layout_alignLeft="@+id/statsCardView"
+                android:layout_alignStart="@+id/statsCardView"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="100dp"
+                android:layout_marginStart="7dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:ems="10"
-                    android:id="@+id/crtPlayerNameTextView"
-                    android:layout_weight="1"
-                    android:text="NumeleTau"
-                    android:gravity="center"
-                    android:layout_width="100dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginLeft="42dp"
-                    android:layout_marginStart="42dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textAppearance="@style/TextAppearance.AppCompat"
-                    android:textStyle="bold"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textSize="16sp" />
+                    android:padding="4dp">
 
-                <TextView
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:id="@+id/advPlayerNameTextView"
-                    android:layout_weight="1"
-                    android:text="NumeleAdv"
-                    android:gravity="center"
-                    android:layout_width="100dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginRight="50dp"
-                    android:layout_marginEnd="50dp"
-                    android:textColor="@color/colorPrimary"
-                    android:textStyle="bold"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textSize="16sp" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
+                        android:id="@+id/urlImageView"
+                        android:minHeight="150dp"
+                        android:minWidth="2dp"
+                        android:maxWidth="200dp"
+                        android:visibility="visible"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:foregroundGravity="center"
+                        android:scaleType="fitCenter" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/crtPlayerScoreTextView"
-                    android:layout_weight="1"
-                    android:text="0pc"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical|end"
-                    android:paddingRight="15dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-
-                    android:textStyle="bold"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textAlignment="textStart"
-                    android:paddingStart="7dp" />
-
-                <TextView
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:id="@+id/advPlayerScoreTextView"
-                    android:layout_weight="1"
-                    android:text="0pc"
-                    android:gravity="center"
-                    android:layout_gravity="center_vertical|start"
-                    android:textStyle="bold"
-                    android:shadowColor="@color/text_shadow"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="2"
-                    android:textAlignment="textEnd"
-                    android:paddingEnd="7dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
-            </RelativeLayout>
-
-        </android.support.v7.widget.CardView>
+        </LinearLayout>
 
         <android.support.v7.widget.CardView
             android:layout_width="match_parent"
@@ -160,10 +201,10 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_marginBottom="25dp"
             android:layout_marginEnd="7dp"
             android:layout_marginStart="7dp"
-            android:layout_height="60dp">
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp">
 
             <TableLayout
                 android:layout_width="match_parent"
@@ -204,38 +245,6 @@
                 </TableRow>
 
             </TableLayout>
-        </android.support.v7.widget.CardView>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_marginTop="32dp"
-            android:id="@+id/imageCardView"
-            android:layout_height="300dp"
-            android:layout_below="@+id/statsCardView"
-            android:layout_alignLeft="@+id/statsCardView"
-            android:layout_alignStart="@+id/statsCardView"
-            android:layout_marginEnd="7dp">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="4dp">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:srcCompat="@drawable/common_google_signin_btn_icon_dark"
-                    android:id="@+id/urlImageView"
-                    android:minHeight="150dp"
-                    android:minWidth="2dp"
-                    android:maxWidth="200dp"
-                    android:visibility="visible"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:foregroundGravity="center"
-                    android:scaleType="fitCenter" />
-            </RelativeLayout>
         </android.support.v7.widget.CardView>
 
     </RelativeLayout>

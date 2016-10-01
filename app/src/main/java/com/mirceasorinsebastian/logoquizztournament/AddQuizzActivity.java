@@ -223,6 +223,8 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
         HashMap key = new HashMap();  HashMap info = new HashMap();
         info.put("ANSWER", answer.toString());
         info.put("URL", img.toString());
+        info.put("BY", GoogleSignInActivity.user.getUid().toString());
+        
         key.put(nrTotalQuizzes.toString(), info);
 
         quizzesRef.updateChildren(key, null);
