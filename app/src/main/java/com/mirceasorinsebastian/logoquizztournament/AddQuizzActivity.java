@@ -224,7 +224,7 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
         info.put("ANSWER", answer.toString());
         info.put("URL", img.toString());
         info.put("BY", GoogleSignInActivity.user.getUid().toString());
-        
+
         key.put(nrTotalQuizzes.toString(), info);
 
         quizzesRef.updateChildren(key, null);

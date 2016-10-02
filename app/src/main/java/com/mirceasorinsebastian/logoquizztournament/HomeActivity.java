@@ -1,10 +1,12 @@
 package com.mirceasorinsebastian.logoquizztournament;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.ContactsContract;
@@ -28,6 +30,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.Serializable;
@@ -127,6 +130,8 @@ public class HomeActivity extends AppCompatActivity
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         FirebaseUserConnection();
         FirebaseGetAnnounces();
+
+        setUserIdShared();
     }
 
     //Setting logged in user acces to his DataBase Node
@@ -260,5 +265,20 @@ public class HomeActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void setUserIdShared() {
+        AsyncTask.execute(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences sharedPreferences = getSharedPreferences(userStats.EXTRA, MODE_PRIVATE);
+                sharedPreferences.edit().putString("userID", GoogleSignInActivity.user.getUid().toString()).apply();
+                Log.i("setUserIdShared", "done");
+            }
+        });
+
+        String token = FirebaseInstanceId.getInstance().getToken();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
+        database.getReference("connectedUsers").child(GoogleSignInActivity.user.getUid().toString()).child("TOKEN").setValue(token);
     }
 }
