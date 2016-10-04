@@ -4,6 +4,7 @@ import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.media.Image;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -45,6 +46,7 @@ public class GameFragment extends Fragment {
     private String mParam2;
     private OnFragmentInteractionListener mListener;
 
+    private TextView lettersNumberTextView;
     GameStats gameStats;
 
     public GameFragment() {
@@ -102,6 +104,21 @@ public class GameFragment extends Fragment {
 
         //Start the actual quizz
         startQuizz();
+
+        //SetUP the explination for lettersButton
+        FloatingActionButton lettersButton = (FloatingActionButton) fragmentView.findViewById(R.id.lettersButton);
+        lettersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(fragmentView, "Numbers of letters", Snackbar.LENGTH_SHORT).setAction("Action", null).show();
+            }
+        });
+
+        lettersButton.bringToFront();
+
+
+        lettersNumberTextView = (TextView) fragmentView.findViewById(R.id.lettersNumberTextView);
+        lettersNumberTextView.setText(String.valueOf(gameStats.getNumberOfLetters()));
 
         return fragmentView;
     }

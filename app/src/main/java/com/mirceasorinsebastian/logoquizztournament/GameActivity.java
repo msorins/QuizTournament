@@ -56,6 +56,7 @@ import java.util.HashMap;
 class GameStats implements Serializable {
     public static final String EXTRA = "com.mirceasorinsebastian.logoquizztournament";
     private boolean isGameRunning;
+    private int numberOfLetters;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -64,6 +65,14 @@ class GameStats implements Serializable {
     public void setIsGameRunning(Boolean status) {
         this.isGameRunning = status;
         Log.i("setISGameRunning: ", "set");
+    }
+
+    public int getNumberOfLetters() {
+        return this.numberOfLetters;
+    }
+
+    public void setNumberOfLetters(int value) {
+        this.numberOfLetters = value;
     }
 
 }
@@ -240,6 +249,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         if (crtGAME_STATUS.equals("preparing") && ((crtPlayerNumber == 1 && PLAYER1_STATUS.equals("connected")) || (crtPlayerNumber == 2 && PLAYER2_STATUS.equals("connected")))) {
             waitRoomProcess = true;
             String GAME_QUIZZ = dataSnapshot.child("GAME_QUIZZ").getValue().toString();
+            gameStats.setNumberOfLetters(Integer.valueOf(dataSnapshot.child("GAME_ANSWERLETTERS").getValue().toString())); // set answer's number of letters
             getQuizzImage(GAME_QUIZZ); // here set user value to ready
         }
 

@@ -192,7 +192,7 @@ tools:context="com.mirceasorinsebastian.logoquizztournament.MainActivity">
                         android:padding="15dp">
 
                         <TextView
-                            android:text="Announces"
+                            android:text="News"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentTop="true"

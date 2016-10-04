@@ -22,10 +22,65 @@
         android:layout_centerHorizontal="true"
         android:visibility="visible">
 
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:id="@+id/inputCardView"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:layout_height="match_parent"
+                        android:inputType="textPersonName"
+                        android:ems="10"
+                        android:id="@+id/answerEditText"
+                        android:layout_width="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignRight="@+id/gameStatusTextView"
+                        android:layout_alignEnd="@+id/gameStatusTextView"
+                        android:layout_weight="2"
+                        android:foregroundGravity="bottom|center_horizontal" />
+
+                    <android.support.design.widget.FloatingActionButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|end"
+                        app:srcCompat="@android:drawable/ic_menu_send"
+                        app:elevation="4dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="6dp"
+                        android:id="@+id/sendButton"
+                        app:fabSize="normal" />
+
+                </TableRow>
+
+            </TableLayout>
+        </android.support.v7.widget.CardView>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
 
             <ProgressBar
                 style="@android:style/Widget.Material.Light.ProgressBar.Horizontal"
@@ -159,9 +214,41 @@
 
             </android.support.v7.widget.CardView>
 
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="10dp"
+                android:elevation="8dp"
+                android:layout_marginTop="-5dp">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:src="@android:color/transparent"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:id="@+id/lettersButton"
+                    android:layout_height="40dp"
+                    android:layout_width="40dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="3"
+                    android:elevation="17dp"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:id="@+id/lettersNumberTextView"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textSize="20sp" />
+            </FrameLayout>
+
             <android.support.v7.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="-10dp"
                 android:id="@+id/imageCardView"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/statsCardView"
@@ -194,58 +281,6 @@
             </android.support.v7.widget.CardView>
 
         </LinearLayout>
-
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:id="@+id/inputCardView"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="7dp"
-            android:layout_marginStart="7dp"
-            android:layout_height="50dp"
-            android:layout_marginBottom="10dp">
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true">
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <EditText
-                        android:layout_height="match_parent"
-                        android:inputType="textPersonName"
-                        android:ems="10"
-                        android:id="@+id/answerEditText"
-                        android:layout_width="match_parent"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignRight="@+id/gameStatusTextView"
-                        android:layout_alignEnd="@+id/gameStatusTextView"
-                        android:layout_weight="2"
-                        android:foregroundGravity="bottom|center_horizontal" />
-
-                    <android.support.design.widget.FloatingActionButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        app:srcCompat="@android:drawable/ic_menu_send"
-                        app:elevation="4dp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginBottom="6dp"
-                        android:id="@+id/sendButton"
-                        app:fabSize="normal" />
-
-                </TableRow>
-
-            </TableLayout>
-        </android.support.v7.widget.CardView>
 
     </RelativeLayout>
 
