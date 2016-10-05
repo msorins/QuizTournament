@@ -196,6 +196,7 @@ public class HomeActivity extends AppCompatActivity
             HashMap key = new HashMap(); HashMap key2 = new HashMap();
             key2.put("type", "newGameTwoRequest");
             key2.put("QP", Integer.toString(userStats.getUserQP()));
+            key2.put("ENTERTIME", String.valueOf(System.currentTimeMillis()));
 
             key.put(GoogleSignInActivity.user.getUid().toString(), key2);
             queueRef.updateChildren(key, null);

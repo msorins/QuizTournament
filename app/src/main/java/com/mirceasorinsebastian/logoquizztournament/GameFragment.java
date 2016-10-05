@@ -13,6 +13,7 @@ import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompatSideChannelService;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -59,6 +60,7 @@ public class GameFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         gameStats = (GameStats) getArguments().getSerializable(GameStats.EXTRA);
+        crtPlayerNumber = gameStats.getCrtPlayerNumber();
     }
 
     @Override
@@ -131,7 +133,6 @@ public class GameFragment extends Fragment {
 
             GameActivity gameActivity = (GameActivity) getActivity();
             crtRoomId = gameActivity.crtRoomId;
-            crtPlayerNumber = gameActivity.crtPlayerNumber;
             PLAYER1_ID = gameActivity.PLAYER1_ID;
             PLAYER2_ID = gameActivity.PLAYER2_ID;
             PLAYER1_WINS = gameActivity.PLAYER1_WINS;
@@ -243,7 +244,8 @@ public class GameFragment extends Fragment {
                 if(crtUser) {
                     setCrtPlayerName(dataSnapshot.child("NICKNAME").getValue().toString());
                 }  else {
-                    setAdvPlayerName(dataSnapshot.child("NICKNAME").getValue().toString());
+                    if(!gameStats.getGameMode().equals("AI"))
+                        setAdvPlayerName(dataSnapshot.child("NICKNAME").getValue().toString());
                 }
             }
 

@@ -56,7 +56,8 @@ import java.util.HashMap;
 class GameStats implements Serializable {
     public static final String EXTRA = "com.mirceasorinsebastian.logoquizztournament";
     private boolean isGameRunning;
-    private int numberOfLetters;
+    private int numberOfLetters, crtPlayerNumber;
+    private String gameMode;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -75,13 +76,27 @@ class GameStats implements Serializable {
         this.numberOfLetters = value;
     }
 
+    public String getGameMode() {
+        return this.gameMode;
+    }
+
+    public void setGameMode(String value){
+        this.gameMode = value;
+    }
+
+    public int getCrtPlayerNumber() {
+        return this.crtPlayerNumber;
+    }
+
+    public void setCrtPlayerNumber(int value) {
+        this.crtPlayerNumber = value;
+    }
 }
 
 public class GameActivity extends AppCompatActivity implements GameLoadingFragment.OnFragmentInteractionListener, GameFragment.OnFragmentInteractionListener, GameResultFragment.OnFragmentInteractionListener {
 
     public String crtRoomId, savedRoomId, PLAYER1_ID, PLAYER2_ID, PLAYER1_WINS, PLAYER2_WINS;
     public String crtGAME_STATUS = "waiting";
-    public Integer crtPlayerNumber = 0;
     public Uri imageUri;
 
     public FirebaseDatabase database;
@@ -218,35 +233,50 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         Log.i("GameActivity - status: ", crtGAME_STATUS);
         Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
 
-        PLAYER1_ID = dataSnapshot.child("PLAYER1_ID").getValue().toString();
-        PLAYER2_ID = dataSnapshot.child("PLAYER2_ID").getValue().toString();
-        String PLAYER1_STATUS = dataSnapshot.child("PLAYER1_STATUS").getValue().toString();
-        String PLAYER2_STATUS = dataSnapshot.child("PLAYER2_STATUS").getValue().toString();
-        String GAME_ROUNDS = dataSnapshot.child("GAME_ROUNDS").getValue().toString();
-        crtGAME_STATUS = dataSnapshot.child("GAME_STATUS").getValue().toString();
-        PLAYER1_WINS = dataSnapshot.child("PLAYER1_WINS").getValue().toString();
-        PLAYER2_WINS = dataSnapshot.child("PLAYER2_WINS").getValue().toString();
+        String PLAYER1_STATUS="", PLAYER2_STATUS="", GAME_ROUNDS="", GAME_MODE="";
+        if(dataSnapshot.child("PLAYER1_ID").getValue() != null)
+             PLAYER1_ID = dataSnapshot.child("PLAYER1_ID").getValue().toString();
+        if(dataSnapshot.child("PLAYER2_ID").getValue() != null)
+             PLAYER2_ID = dataSnapshot.child("PLAYER2_ID").getValue().toString();
+        if(dataSnapshot.child("PLAYER1_STATUS").getValue() != null)
+             PLAYER1_STATUS = dataSnapshot.child("PLAYER1_STATUS").getValue().toString();
+        if(dataSnapshot.child("PLAYER2_STATUS").getValue() != null)
+             PLAYER2_STATUS = dataSnapshot.child("PLAYER2_STATUS").getValue().toString();
+        if(dataSnapshot.child("GAME_ROUNDS").getValue() != null )
+            GAME_ROUNDS = dataSnapshot.child("GAME_ROUNDS").getValue().toString();
+        if(dataSnapshot.child("GAME_MODE").getValue() != null)
+            GAME_MODE = dataSnapshot.child("GAME_MODE").getValue().toString();
+        if(dataSnapshot.child("GAME_STATUS").getValue() != null)
+            crtGAME_STATUS = dataSnapshot.child("GAME_STATUS").getValue().toString();
+        if(dataSnapshot.child("PLAYER1_WINS").getValue() != null)
+            PLAYER1_WINS = dataSnapshot.child("PLAYER1_WINS").getValue().toString();
+        if(dataSnapshot.child("PLAYER2_WINS").getValue() != null)
+            PLAYER2_WINS = dataSnapshot.child("PLAYER2_WINS").getValue().toString();
+
+        gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());
+
 
         //STEP0 AND STEP1: establish crtPlayerNumber and set it to connected
+
         if (crtGAME_STATUS.equals("waitingForPlayers") && PLAYER1_ID.equals(GoogleSignInActivity.user.getUid().toString()) && PLAYER1_STATUS.equals("waiting")) {
             waitRoomProcess = true;
             database.getReference("rooms/" + crtRoomId + "/PLAYER1_STATUS").setValue("connected");
             database.getReference("rooms/" + crtRoomId + "/PLAYER1_FOCUS").setValue("focused");
-            crtPlayerNumber = 1;
-            waitRoomProcess = false;
-
-        }
-
-        if (crtGAME_STATUS.equals("waitingForPlayers")  && PLAYER2_ID.equals(GoogleSignInActivity.user.getUid().toString()) && PLAYER2_STATUS.equals("waiting")) {
-            waitRoomProcess = true;
-            database.getReference("rooms/" + crtRoomId + "/PLAYER2_STATUS").setValue("connected");
-            database.getReference("rooms/" + crtRoomId + "/PLAYER2_FOCUS").setValue("focused");
-            crtPlayerNumber = 2;
+            gameStats.setCrtPlayerNumber(1);
             waitRoomProcess = false;
         }
+
+        if(!GAME_MODE.equals("AI"))
+            if (crtGAME_STATUS.equals("waitingForPlayers")  && PLAYER2_ID.equals(GoogleSignInActivity.user.getUid().toString()) && PLAYER2_STATUS.equals("waiting")) {
+                waitRoomProcess = true;
+                database.getReference("rooms/" + crtRoomId + "/PLAYER2_STATUS").setValue("connected");
+                database.getReference("rooms/" + crtRoomId + "/PLAYER2_FOCUS").setValue("focused");
+                gameStats.setCrtPlayerNumber(2);
+                waitRoomProcess = false;
+            }
 
         //STEP2: PREPARING
-        if (crtGAME_STATUS.equals("preparing") && ((crtPlayerNumber == 1 && PLAYER1_STATUS.equals("connected")) || (crtPlayerNumber == 2 && PLAYER2_STATUS.equals("connected")))) {
+        if (crtGAME_STATUS.equals("preparing") && ((gameStats.getCrtPlayerNumber() == 1 && PLAYER1_STATUS.equals("connected")) || (gameStats.getCrtPlayerNumber() == 2 && PLAYER2_STATUS.equals("connected")))) {
             waitRoomProcess = true;
             String GAME_QUIZZ = dataSnapshot.child("GAME_QUIZZ").getValue().toString();
             gameStats.setNumberOfLetters(Integer.valueOf(dataSnapshot.child("GAME_ANSWERLETTERS").getValue().toString())); // set answer's number of letters
@@ -255,9 +285,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
 
         //STEP3: RUNNING
-        if (crtGAME_STATUS.equals("running") && ((crtPlayerNumber == 1 && PLAYER1_STATUS.equals("ready")) || (crtPlayerNumber == 2 && PLAYER2_STATUS.equals("ready")))) {
+        if (crtGAME_STATUS.equals("running") && ((gameStats.getCrtPlayerNumber() == 1 && PLAYER1_STATUS.equals("ready")) || (gameStats.getCrtPlayerNumber() == 2 && PLAYER2_STATUS.equals("ready")))) {
             waitRoomProcess = true;
-            if(crtPlayerNumber == 1 )
+            if(gameStats.getCrtPlayerNumber() == 1 )
                 database.getReference("rooms/" + crtRoomId + "/PLAYER1_STATUS").setValue("ingame");
             else
                 database.getReference("rooms/" + crtRoomId + "/PLAYER2_STATUS").setValue("ingame");
@@ -271,7 +301,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             gameStats.setIsGameRunning(false);
             String GAME_WINNER = dataSnapshot.child("GAME_WINNER").getValue().toString();
 
-            if((crtPlayerNumber == 1 && GAME_WINNER.equals("PLAYER1")) || (crtPlayerNumber == 2 && GAME_WINNER.equals("PLAYER2")))
+            if((gameStats.getCrtPlayerNumber() == 1 && GAME_WINNER.equals("PLAYER1")) || (gameStats.getCrtPlayerNumber() == 2 && GAME_WINNER.equals("PLAYER2")))
                 showResultUI("Congratulation, you Won!", "+10 QP");
             else
                 if(GAME_WINNER.equals("ABANDON"))
@@ -282,7 +312,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             //Set user Room to none
              database.getReference("connectedUsers/"+GoogleSignInActivity.user.getUid().toString()).child("GAME_ROOM").setValue("none");
 
-            if(crtPlayerNumber == 1 )
+            if(gameStats.getCrtPlayerNumber() == 1 )
                 database.getReference("rooms/" + crtRoomId + "/PLAYER1_STATUS").setValue("exited");
             else
                 database.getReference("rooms/" + crtRoomId + "/PLAYER2_STATUS").setValue("exited");
@@ -312,12 +342,11 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
                 waitRoomProcess = false;
                 Log.i("crtImageUri: ", imageUri.toString());
                 //SetPlayer to ready
-                Log.i("crtPlayerNumber: ", crtPlayerNumber.toString());
-                if(crtPlayerNumber == 1 ) {
+                if(gameStats.getCrtPlayerNumber() == 1 ) {
                     DatabaseReference playerIdRef = databaseRef.getReference("rooms/"+crtRoomId+"/PLAYER1_STATUS");
                     playerIdRef.setValue("ready");
                 }
-                if(crtPlayerNumber == 2) {
+                if(gameStats.getCrtPlayerNumber() == 2) {
                     DatabaseReference playerIdRef = databaseRef.getReference("rooms/"+crtRoomId+"/PLAYER2_STATUS");
                     playerIdRef.setValue("ready");
                 }
@@ -385,9 +414,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
             DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-            if(crtPlayerNumber == 1)
+            if(gameStats.getCrtPlayerNumber() == 1)
                 updatesFromDB.child("PLAYER1_STATUS").setValue("exited");
-            if(crtPlayerNumber == 2)
+            if(gameStats.getCrtPlayerNumber() == 2)
                 updatesFromDB.child("PLAYER2_STATUS").setValue("exited");
 
             Log.i("379: setIsGameRunning(False)", "yeap");
@@ -453,9 +482,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
             DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-            if(crtPlayerNumber == 1)
+            if(gameStats.getCrtPlayerNumber() == 1)
                 updatesFromDB.child("PLAYER1_FOCUS").setValue("unfocused");
-            if(crtPlayerNumber == 2)
+            if(gameStats.getCrtPlayerNumber() == 2)
                 updatesFromDB.child("PLAYER2_FOCUS").setValue("unfocused");
         }
     }
@@ -469,9 +498,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             final FirebaseDatabase database = FirebaseDatabase.getInstance();
 
             DatabaseReference updatesFromDB = database.getReference("rooms/"+savedRoomId);
-            if(crtPlayerNumber == 1)
+            if(gameStats.getCrtPlayerNumber() == 1)
                 updatesFromDB.child("PLAYER1_FOCUS").setValue("focused");
-            if(crtPlayerNumber == 2)
+            if(gameStats.getCrtPlayerNumber() == 2)
                 updatesFromDB.child("PLAYER2_FOCUS").setValue("focused");
         }
     }
