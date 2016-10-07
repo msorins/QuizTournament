@@ -246,6 +246,8 @@ public class GameFragment extends Fragment {
                 }  else {
                     if(!gameStats.getGameMode().equals("AI"))
                         setAdvPlayerName(dataSnapshot.child("NICKNAME").getValue().toString());
+                    else
+                        setAdvPlayerName(gameStats.getAiNickname());
                 }
             }
 

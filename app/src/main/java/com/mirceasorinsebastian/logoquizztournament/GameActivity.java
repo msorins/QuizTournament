@@ -57,7 +57,7 @@ class GameStats implements Serializable {
     public static final String EXTRA = "com.mirceasorinsebastian.logoquizztournament";
     private boolean isGameRunning;
     private int numberOfLetters, crtPlayerNumber;
-    private String gameMode;
+    private String gameMode, aiNickname;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -90,6 +90,14 @@ class GameStats implements Serializable {
 
     public void setCrtPlayerNumber(int value) {
         this.crtPlayerNumber = value;
+    }
+
+    public String getAiNickname() {
+        return this.aiNickname;
+    }
+
+    public void setAiNickname(String value) {
+        this.aiNickname = value;
     }
 }
 
@@ -233,7 +241,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         Log.i("GameActivity - status: ", crtGAME_STATUS);
         Log.i("isGameRunning:", Boolean.toString(gameStats.getIsGameRunning()) );
 
-        String PLAYER1_STATUS="", PLAYER2_STATUS="", GAME_ROUNDS="", GAME_MODE="";
+        String PLAYER1_STATUS="", PLAYER2_STATUS="", GAME_ROUNDS="", GAME_MODE="", AI_NICKNAME="";
         if(dataSnapshot.child("PLAYER1_ID").getValue() != null)
              PLAYER1_ID = dataSnapshot.child("PLAYER1_ID").getValue().toString();
         if(dataSnapshot.child("PLAYER2_ID").getValue() != null)
@@ -252,9 +260,11 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             PLAYER1_WINS = dataSnapshot.child("PLAYER1_WINS").getValue().toString();
         if(dataSnapshot.child("PLAYER2_WINS").getValue() != null)
             PLAYER2_WINS = dataSnapshot.child("PLAYER2_WINS").getValue().toString();
+        if(dataSnapshot.child("AI_NICKNAME").getValue() != null)
+            AI_NICKNAME = dataSnapshot.child("AI_NICKNAME").getValue().toString();
 
         gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());
-
+        gameStats.setAiNickname(AI_NICKNAME);
 
         //STEP0 AND STEP1: establish crtPlayerNumber and set it to connected
 
