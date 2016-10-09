@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Unlock premium to get this feature", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Feature available soon for premium users", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

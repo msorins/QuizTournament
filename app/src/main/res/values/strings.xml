@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Quizz Tournament</string>
+    <string name="app_name">Quiz Tournament</string>
     <string name="title_activity_game">Game Room</string>
     <string name="title_activity_add_quizz">Add Quizz</string>
     <string name="title_activity_home">HQ</string>
