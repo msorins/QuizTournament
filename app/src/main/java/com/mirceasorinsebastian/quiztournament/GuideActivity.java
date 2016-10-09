@@ -1,4 +1,4 @@
-package com.mirceasorinsebastian.logoquizztournament;
+package com.mirceasorinsebastian.quiztournament;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

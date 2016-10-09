@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.mirceasorinsebastian.logoquizztournament.ProfileActivity">
+    tools:context="com.mirceasorinsebastian.quiztournament.ProfileActivity">
 
     <Button
         android:id="@+id/saveButton"

@@ -1,5 +1,5 @@
 
-package com.mirceasorinsebastian.logoquizztournament;
+package com.mirceasorinsebastian.quiztournament;
 
 
 import android.app.NotificationManager;
@@ -13,8 +13,6 @@ import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
-import com.mirceasorinsebastian.logoquizztournament.HomeActivity;
-import com.mirceasorinsebastian.logoquizztournament.R;
 
 public class myFirebaseMessagingService extends FirebaseMessagingService {
 

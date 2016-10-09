@@ -1,4 +1,4 @@
-package com.mirceasorinsebastian.logoquizztournament;
+package com.mirceasorinsebastian.quiztournament;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

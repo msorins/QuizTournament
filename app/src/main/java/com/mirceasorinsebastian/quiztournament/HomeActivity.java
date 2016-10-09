@@ -1,4 +1,4 @@
-package com.mirceasorinsebastian.logoquizztournament;
+package com.mirceasorinsebastian.quiztournament;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -8,11 +8,8 @@ import android.graphics.Shader;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.util.AndroidException;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -21,7 +18,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -37,7 +33,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 class UserStats implements Serializable{
-    public static final String EXTRA = "com.mirceasorinsebastian.logoquizztournament";
+    public static final String EXTRA = "com.mirceasorinsebastian.quiztournament";
     private int userQP, userGamesPlayed, userGamesWon;
     private String userNickname;
 

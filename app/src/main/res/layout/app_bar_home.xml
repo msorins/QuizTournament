@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.mirceasorinsebastian.logoquizztournament.HomeActivity">
+    tools:context="com.mirceasorinsebastian.quiztournament.HomeActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@ android:paddingBottom="0dp"
 android:paddingLeft="0dp"
 android:paddingRight="0dp"
 android:paddingTop="0dp"
-tools:context="com.mirceasorinsebastian.logoquizztournament.MainActivity">
+tools:context="com.mirceasorinsebastian.quiztournament.MainActivity">
 
         <Button
     android:text="Play"
@@ -216,7 +216,7 @@ tools:context="com.mirceasorinsebastian.logoquizztournament.MainActivity">
                             android:textAlignment="center"
                             android:elevation="24dp"
                             android:layout_marginTop="60dp"
-                            android:layout_below="@+id/textView9"
+
                             android:layout_alignParentRight="true"
                             android:layout_alignParentEnd="true"
                             android:id="@+id/announcesTextView" />

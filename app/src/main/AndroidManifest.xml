@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mirceasorinsebastian.logoquizztournament">
-
+<manifest android:versionCode="@string/versionCode" android:versionName="@string/versionName" xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mirceasorinsebastian.quiztournament">
     <application
         android:allowBackup="true"
         android:icon="@drawable/applogo"
@@ -10,7 +9,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GoogleSignInActivity">
+        <activity android:name="com.mirceasorinsebastian.quiztournament.GoogleSignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.DEFAULT" />
@@ -20,58 +19,56 @@
         </activity>
 
         <service
-            android:name=".myFirebaseMessagingService"
+            android:name="com.mirceasorinsebastian.quiztournament.myFirebaseMessagingService"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-        <service android:name=".myFirebaseInstanceIDService">
+        <service android:name="com.mirceasorinsebastian.quiztournament.myFirebaseInstanceIDService">
             <intent-filter>
                 <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
         <activity
-            android:name=".GameActivity"
+            android:name="com.mirceasorinsebastian.quiztournament.GameActivity"
             android:label="@string/title_activity_game"
             android:launchMode="singleTop"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.mirceasorinsebastian.quiztournament.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mirceasorinsebastian.logoquizztournament.HomeActivity" />
+                android:value="com.mirceasorinsebastian.quiztournament.HomeActivity" />
         </activity>
         <activity
-            android:name=".AddQuizzActivity"
+            android:name="com.mirceasorinsebastian.quiztournament.AddQuizzActivity"
             android:label="@string/title_activity_add_quizz"
-            android:parentActivityName=".HomeActivity"
+            android:parentActivityName="com.mirceasorinsebastian.quiztournament.HomeActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.mirceasorinsebastian.logoquizztournament.HomeActivity" />
+                android:value="com.mirceasorinsebastian.quiztournament.HomeActivity" />
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name="com.mirceasorinsebastian.quiztournament.HomeActivity"
             android:label="@string/title_activity_home"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".GuideActivity"
-            android:parentActivityName=".HomeActivity"
+            android:name="com.mirceasorinsebastian.quiztournament.GuideActivity"
+            android:parentActivityName="com.mirceasorinsebastian.quiztournament.HomeActivity"
             />
         <activity
-            android:name=".ProfileActivity"
-            android:parentActivityName=".HomeActivity"
+            android:name="com.mirceasorinsebastian.quiztournament.ProfileActivity"
+            android:parentActivityName="com.mirceasorinsebastian.quiztournament.HomeActivity"
             ></activity>
     </application>
 

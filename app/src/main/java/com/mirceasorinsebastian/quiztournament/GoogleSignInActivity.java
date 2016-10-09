@@ -1,5 +1,5 @@
 
-package com.mirceasorinsebastian.logoquizztournament;
+package com.mirceasorinsebastian.quiztournament;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -29,7 +29,6 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
-import com.mirceasorinsebastian.logoquizztournament.R;
 
 /**
  * Demonstrate Firebase Authentication using a Google ID Token.
