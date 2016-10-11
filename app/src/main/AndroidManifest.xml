@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest android:versionCode="@string/versionCode" android:versionName="@string/versionName" xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mirceasorinsebastian.quiztournament">
+    package="com.mirceasorinsebastian.quiztournament" >
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/applogo"

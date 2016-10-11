@@ -17,7 +17,8 @@
             android:layout_alignParentStart="true"
             android:layout_height="250dp"
             android:layout_marginEnd="7dp"
-            android:layout_marginStart="7dp">
+            android:layout_marginStart="7dp"
+            android:visibility="visible">
 
             <RelativeLayout
                 android:layout_width="fill_parent"
@@ -65,7 +66,9 @@
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:foregroundGravity="center"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="10dp" >
+
+                </com.google.android.gms.common.SignInButton>
 
                 <TextView
                     android:text="Authentication"
@@ -83,6 +86,58 @@
                     android:textColor="@color/colorAccent"
                     android:textSize="27sp" />
 
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loadingProgressBar"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="29dp"
+                    android:visibility="invisible" />
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:id="@+id/loadingCardView"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Logging in !"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:id="@+id/textView3"
+                    android:textStyle="bold"
+                    android:shadowColor="@color/text_shadow"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="2"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="27sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:id="@+id/progressBar3"
+                    android:layout_below="@+id/textView3"
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
         </android.support.v7.widget.CardView>
 

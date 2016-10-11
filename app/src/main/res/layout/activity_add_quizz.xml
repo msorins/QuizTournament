@@ -28,7 +28,7 @@
         android:layout_gravity="bottom|center"
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_menu_send"
-        app:backgroundTint="?android:attr/colorPrimaryDark" />
+        />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -89,7 +89,6 @@
                     android:inputType="textPersonName"
                     android:ems="10"
                     android:id="@+id/logoQuizzAnswerEditText"
-                    android:textColorLink="?android:attr/colorPrimary"
                     android:layout_marginBottom="22dp"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"

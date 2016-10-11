@@ -110,25 +110,6 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:text="20:00"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/timeLeftTextView"
-                        android:textSize="38sp"
-                        android:textColor="@color/colorAccent"
-                        android:elevation="24dp"
-                        android:paddingLeft="35dp"
-                        android:paddingRight="35dp"
-                        android:layout_centerVertical="true"
-                        android:layout_centerHorizontal="true"
-
-                        android:shadowColor="@color/text_shadow"
-                        android:shadowDx="1"
-                        android:shadowDy="1"
-                        android:shadowRadius="2"
-                         />
-
-                    <TextView
                         android:layout_height="match_parent"
                         android:ems="10"
                         android:id="@+id/crtPlayerNameTextView"
@@ -210,6 +191,28 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true" />
+
+                    <TextView
+                        android:text="20:00"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/timeLeftTextView"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical|start"
+                        android:textStyle="bold"
+                        android:shadowColor="@color/text_shadow"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="2"
+                        android:textAlignment="textEnd"
+                        android:paddingEnd="7dp"
+                        android:textSize="40sp"
+                        android:textColor="@color/colorAccent"
+                        android:layout_height="42dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+
+
                 </RelativeLayout>
 
             </android.support.v7.widget.CardView>
