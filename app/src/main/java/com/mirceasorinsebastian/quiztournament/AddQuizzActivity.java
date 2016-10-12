@@ -18,8 +18,11 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -33,8 +36,11 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
+import java.lang.reflect.Array;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class AddQuizzActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -44,6 +50,7 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
     public Integer nrTotalQuizzes = -1;
     ImageView uploadImageView;
 
+    public Spinner quizCategoriesSpinner;
     private static final int FILE_SELECT_CODE = 0;
 
     private void showFileChooser() {
@@ -122,7 +129,8 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button sendQuizButton = (Button) findViewById(R.id.sendQuizButton);
+        sendQuizButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -170,8 +178,10 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
             }
         });
 
+        quizCategoriesSpinner = (Spinner) findViewById(R.id.quizCategoriesSpinner);
 
         getNrTotalQuizzes();
+        FirebaseGetCategories();
     }
 
     public void uploadFile(Uri s) {
@@ -198,7 +208,7 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
             public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                 // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
                 imageExternalLink = taskSnapshot.getDownloadUrl();
-                Log.i("File that was just uploaded: ", imageExternalLink.toString());
+                Log.i("Uploaded file:", imageExternalLink.toString());
                 makeQuizz(answerText, imageExternalLink);
             }
         });
@@ -248,6 +258,33 @@ public class AddQuizzActivity extends AppCompatActivity implements View.OnClickL
         });
     }
 
+    public void FirebaseGetCategories() {
+        final List<String> categories = new ArrayList<>();
+
+        final FirebaseDatabase  database = FirebaseDatabase.getInstance();
+
+        DatabaseReference homeAnnouncesDB = database.getReference("categories/");
+        homeAnnouncesDB.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                Integer crtCategories = 0;
+
+                for (DataSnapshot messageSnapshot: dataSnapshot.getChildren()) {
+                    categories.add(messageSnapshot.getValue().toString());
+                }
+
+                ArrayAdapter<String> categoriesArray = new ArrayAdapter<String>(AddQuizzActivity.this,android.R.layout.simple_spinner_item, categories);
+                categoriesArray.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                quizCategoriesSpinner.setAdapter(categoriesArray);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.i("dbOnChangeFailed", "Failed to read value.", error.toException());
+            }
+        });
+    }
 
     @Override
     public void onClick(View v) {

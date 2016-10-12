@@ -52,7 +52,7 @@
                         android:layout_marginLeft="29dp"
                         android:layout_marginStart="29dp"
                         android:layout_marginTop="21dp"
-                        android:textSize="18sp"
+                        android:textSize="25sp"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
@@ -60,8 +60,7 @@
                         android:shadowDx="1"
                         android:shadowDy="1"
                         android:shadowRadius="2"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold" />
+                        android:textColor="@color/colorPrimary" />
 
                     <EditText
                         android:layout_width="match_parent"
