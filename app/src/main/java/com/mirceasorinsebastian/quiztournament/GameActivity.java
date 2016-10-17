@@ -31,10 +31,10 @@ import java.io.IOException;
 import java.io.Serializable;
 
 class GameStats implements Serializable {
-    public static final String EXTRA = "com.mirceasorinsebastian.quiztournament";
+    public static final String EXTRA = "com.mirceasorinsebastian.quiztournamentGameStats";
     private boolean isGameRunning;
     private int numberOfLetters, crtPlayerNumber;
-    private String gameMode, aiNickname;
+    private String gameMode, aiNickname, gameCategory;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -76,6 +76,14 @@ class GameStats implements Serializable {
     public void setAiNickname(String value) {
         this.aiNickname = value;
     }
+
+    public String getGameCategory() {
+        return this.gameCategory;
+    }
+
+    public void setGameCategory(String value) {
+        this.gameCategory = value;
+    }
 }
 
 public class GameActivity extends AppCompatActivity implements GameLoadingFragment.OnFragmentInteractionListener, GameFragment.OnFragmentInteractionListener, GameResultFragment.OnFragmentInteractionListener {
@@ -110,7 +118,6 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         userStats = (UserStats) getIntent().getSerializableExtra(UserStats.EXTRA);
 
         gameStats = new GameStats();
-        Log.i("104: setIsGameRunning(False)", "yeap");
         gameStats.setIsGameRunning(false);
 
         gameLoadingFragment = new GameLoadingFragment();
@@ -239,6 +246,10 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             PLAYER2_WINS = dataSnapshot.child("PLAYER2_WINS").getValue().toString();
         if(dataSnapshot.child("AI_NICKNAME").getValue() != null)
             AI_NICKNAME = dataSnapshot.child("AI_NICKNAME").getValue().toString();
+        if(dataSnapshot.child("GAME_CATEGORY").getValue() != null)
+            gameStats.setGameCategory(dataSnapshot.child("GAME_CATEGORY").getValue().toString());
+        else
+            gameStats.setGameCategory("random");
 
         gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());
         gameStats.setAiNickname(AI_NICKNAME);
@@ -379,7 +390,8 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
     public void showResultUI(String msg, String snackBarMsg) {
         Log.i("UI", "showResultUI - called");
 
-        Bundle b = new Bundle(); b.putString("message", msg); b.putString("snackBarMsg", snackBarMsg); b.putSerializable(UserStats.EXTRA, (Serializable) userStats);
+        Bundle b = new Bundle(); b.putString("message", msg); b.putString("snackBarMsg", snackBarMsg);
+        b.putSerializable(UserStats.EXTRA, (Serializable) userStats); b.putSerializable(GameStats.EXTRA, (Serializable) gameStats);
         gameResultFragment = new GameResultFragment();
         gameResultFragment.setArguments(b);
 

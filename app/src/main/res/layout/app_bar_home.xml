@@ -42,11 +42,10 @@ android:paddingTop="0dp"
 tools:context="com.mirceasorinsebastian.quiztournament.MainActivity">
 
         <Button
-    android:text="Play"
+    android:text="Play random"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:onClick="startGame"
-    android:background="@color/colorPrimary"
+            android:background="@color/colorPrimary"
     android:textColor="@android:color/background_light"
     android:textSize="25sp"
     android:id="@+id/startGameButton"
@@ -224,6 +223,18 @@ tools:context="com.mirceasorinsebastian.quiztournament.MainActivity">
                     </RelativeLayout>
 
                 </android.support.v7.widget.CardView>
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/categoriesListView"
+                    android:layout_marginEnd="7dp"
+                    android:layout_marginStart="7dp"
+                    android:dividerHeight="7dp"
+                    android:headerDividersEnabled="false"
+                    android:cacheColorHint="@color/cardview_light_background"
+                    android:footerDividersEnabled="false"
+                    android:divider="@android:color/transparent" />
             </LinearLayout>
         </ScrollView>
 

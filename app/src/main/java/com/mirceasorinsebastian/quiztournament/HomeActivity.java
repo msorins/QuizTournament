@@ -1,5 +1,7 @@
 package com.mirceasorinsebastian.quiztournament;
 
+import android.content.ClipData;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -11,6 +13,8 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +23,11 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +39,9 @@ import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 class UserStats implements Serializable{
     public static final String EXTRA = "com.mirceasorinsebastian.quiztournament";
@@ -70,6 +81,8 @@ public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     public TextView QPTextView, userStatisticsTextView, announcesTextView;
+    public List<categoriesListItem> catArrayList;
+    ListView categoriesListView;
 
     UserStats userStats;
 
@@ -116,6 +129,14 @@ public class HomeActivity extends AppCompatActivity
         QPTextView = (TextView) findViewById(R.id.QPTextView);
         userStatisticsTextView = (TextView) findViewById(R.id.userStatisticsTextView);
         announcesTextView = (TextView) findViewById(R.id.announcesTextView);
+        categoriesListView = (ListView) findViewById(R.id.categoriesListView);
+        Button startGameButton = (Button) findViewById(R.id.startGameButton);
+        startGameButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startGame("random");
+            }
+        });
 
         //If user is logged in
         if(GoogleSignInActivity.user != null)
@@ -128,8 +149,10 @@ public class HomeActivity extends AppCompatActivity
         FirebaseMessaging.getInstance().subscribeToTopic("news");
         FirebaseUserConnection();
         FirebaseGetAnnounces();
+        FirebaseGetCategories();
 
         setUserIdShared();
+
     }
 
     //Setting logged in user acces to his DataBase Node
@@ -181,7 +204,7 @@ public class HomeActivity extends AppCompatActivity
         });
     }
 
-    public void startGame(View v) {
+    public void startGame(String category) {
         final FirebaseDatabase  database = FirebaseDatabase.getInstance();
 
         if(userStats.getUserQP() >= 10) {
@@ -195,6 +218,7 @@ public class HomeActivity extends AppCompatActivity
             key2.put("type", "newGameTwoRequest");
             key2.put("QP", Integer.toString(userStats.getUserQP()));
             key2.put("ENTERTIME", String.valueOf(System.currentTimeMillis()));
+            key2.put("CATEGORY", category);
 
             key.put(GoogleSignInActivity.user.getUid().toString(), key2);
             queueRef.updateChildren(key, null);
@@ -222,6 +246,49 @@ public class HomeActivity extends AppCompatActivity
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if(dataSnapshot.exists())
                     announcesTextView.setText(dataSnapshot.getValue().toString());
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+                Log.i("dbOnChangeFailed", "Failed to read value.", error.toException());
+            }
+        });
+    }
+
+    public void FirebaseGetCategories() {
+        final FirebaseDatabase  database = FirebaseDatabase.getInstance();
+
+        DatabaseReference homeAnnouncesDB = database.getReference("categories/");
+        homeAnnouncesDB.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if(dataSnapshot.exists()){
+                    catArrayList = new ArrayList<categoriesListItem>();
+
+                    for (DataSnapshot crtSnapshot: dataSnapshot.getChildren()) {
+                        categoriesListItem catListObj = new categoriesListItem();
+                        catListObj.setCategoryName(crtSnapshot.getValue().toString());
+                        catArrayList.add(catListObj);
+                    }
+
+                    // get data from the table by the ListAdapter
+                    ListAdapter customAdapter = new ListAdapter(getBaseContext(), R.layout.activity_home_categorieslist, catArrayList);
+
+                    categoriesListView.setAdapter(customAdapter);
+
+                    categoriesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                            Log.i("Clicked: ", "TRUE" + String.valueOf(i));
+                            startGame(catArrayList.get(i).getCategoryName());
+                        }
+                    });
+
+                    setListViewHeightBasedOnChildren(categoriesListView);
+
+                }
+
             }
 
             @Override
@@ -279,5 +346,64 @@ public class HomeActivity extends AppCompatActivity
         String token = FirebaseInstanceId.getInstance().getToken();
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         database.getReference("connectedUsers").child(GoogleSignInActivity.user.getUid().toString()).child("TOKEN").setValue(token);
+    }
+
+    public static void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = (ListAdapter) listView.getAdapter();
+        if (listAdapter == null)
+            return;
+
+        int desiredWidth = View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.UNSPECIFIED);
+        int totalHeight = 0;
+        View view = null;
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            view = listAdapter.getView(i, view, listView);
+            if (i == 0)
+                view.setLayoutParams(new ViewGroup.LayoutParams(desiredWidth, DrawerLayout.LayoutParams.WRAP_CONTENT));
+
+            view.measure(desiredWidth, View.MeasureSpec.UNSPECIFIED);
+            totalHeight += view.getMeasuredHeight();
+        }
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
+    }
+
+}
+
+class ListAdapter extends ArrayAdapter<categoriesListItem> {
+
+    public ListAdapter(Context context, int textViewResourceId) {
+        super(context, textViewResourceId);
+    }
+
+    public ListAdapter(Context context, int resource, List<categoriesListItem> items) {
+        super(context, resource, items);
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+        View v = convertView;
+
+        if (v == null) {
+            LayoutInflater vi;
+            vi = LayoutInflater.from(getContext());
+            v = vi.inflate(R.layout.activity_home_categorieslist, parent, false);
+        }
+
+        categoriesListItem p = getItem(position);
+
+        if (p != null) {
+            TextView categoryNameTextView = (TextView) v.findViewById(R.id.categoryNameTextView);
+
+            if (categoryNameTextView != null) {
+
+                categoryNameTextView.setText(p.getCategoryName());
+            }
+
+        }
+
+        return v;
     }
 }

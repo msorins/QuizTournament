@@ -28,6 +28,7 @@ public class GameResultFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
 
     UserStats userStats;
+    GameStats gameStats;
 
     public GameResultFragment() {
         // Required empty public constructor
@@ -40,6 +41,7 @@ public class GameResultFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         userStats = (UserStats) getArguments().getSerializable(UserStats.EXTRA);
+        gameStats = (GameStats) getArguments().getSerializable(GameStats.EXTRA);
     }
 
     @Override
@@ -62,7 +64,7 @@ public class GameResultFragment extends Fragment {
         playAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playAgain();
+                playAgain(gameStats.getGameCategory());
             }
         });
 
@@ -90,7 +92,7 @@ public class GameResultFragment extends Fragment {
         void showLoading();
     }
 
-    public void playAgain() {
+    public void playAgain(String category) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference queueRef = database.getReference("queue");
 
@@ -100,6 +102,7 @@ public class GameResultFragment extends Fragment {
             key2.put("type", "newGameTwoRequest");
             key2.put("QP", Integer.toString(userStats.getUserQP()));
             key2.put("ENTERTIME", String.valueOf(System.currentTimeMillis()));
+            key2.put("CATEGORY", category);
 
             key.put(GoogleSignInActivity.user.getUid().toString(), key2);
             queueRef.updateChildren(key, null);
