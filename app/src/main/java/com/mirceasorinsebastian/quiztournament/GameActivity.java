@@ -251,7 +251,9 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         else
             gameStats.setGameCategory("random");
 
-        gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());
+        if(dataSnapshot.child("GAME_MODE").getValue() != null)
+             gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());
+
         gameStats.setAiNickname(AI_NICKNAME);
 
         //STEP0 AND STEP1: establish crtPlayerNumber and set it to connected
@@ -295,9 +297,11 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
         //STEP4: GAME IS FINISHED
         if(crtGAME_STATUS.equals("finished") && gameStats.getIsGameRunning()) {
-            Log.i("257: setIsGameRunning(False)", "yeap");
             gameStats.setIsGameRunning(false);
-            String GAME_WINNER = dataSnapshot.child("GAME_WINNER").getValue().toString();
+
+            String GAME_WINNER = "";
+            if(dataSnapshot.child("GAME_WINNER").getValue() != null)
+               GAME_WINNER = dataSnapshot.child("GAME_WINNER").getValue().toString();
 
             if((gameStats.getCrtPlayerNumber() == 1 && GAME_WINNER.equals("PLAYER1")) || (gameStats.getCrtPlayerNumber() == 2 && GAME_WINNER.equals("PLAYER2")))
                 showResultUI("Congratulation, you Won!", "+10 QP");
