@@ -26,6 +26,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -80,8 +81,9 @@ public class HomeActivity extends AppCompatActivity
 
     public TextView QPTextView, userStatisticsTextView, announcesTextView;
     public List<categoriesListItem> catArrayList;
-    ListView categoriesListView;
 
+    ListView categoriesListView;
+    ProgressBar loadingProgressBar;
     UserStats userStats;
 
     @Override
@@ -128,6 +130,8 @@ public class HomeActivity extends AppCompatActivity
         userStatisticsTextView = (TextView) findViewById(R.id.userStatisticsTextView);
         announcesTextView = (TextView) findViewById(R.id.announcesTextView);
         categoriesListView = (ListView) findViewById(R.id.categoriesListView);
+        loadingProgressBar = (ProgressBar) findViewById(R.id.loadingProgressBar);
+
         Button startGameButton = (Button) findViewById(R.id.startGameButton);
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -269,6 +273,9 @@ public class HomeActivity extends AppCompatActivity
                         catListObj.setCategoryName(crtSnapshot.getValue().toString());
                         catArrayList.add(catListObj);
                     }
+
+                    //Remove the loading progress bar
+                    loadingProgressBar.setVisibility(View.GONE);
 
                     // get data from the table by the ListAdapter
                     ListAdapter customAdapter = new ListAdapter(getBaseContext(), R.layout.activity_home_categorieslist, catArrayList);

@@ -12,8 +12,10 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -278,6 +280,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
         //STEP2: PREPARING
         if (crtGAME_STATUS.equals("preparing") && ((gameStats.getCrtPlayerNumber() == 1 && PLAYER1_STATUS.equals("connected")) || (gameStats.getCrtPlayerNumber() == 2 && PLAYER2_STATUS.equals("connected")))) {
             waitRoomProcess = true;
+            showRoundFeedbackToast(dataSnapshot);
             String GAME_QUIZZ = dataSnapshot.child("GAME_QUIZZ").getValue().toString();
             gameStats.setNumberOfLetters(Integer.valueOf(dataSnapshot.child("GAME_ANSWERLETTERS").getValue().toString())); // set answer's number of letters
             getQuizzImage(GAME_QUIZZ); // here set user value to ready
@@ -297,6 +300,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
         //STEP4: GAME IS FINISHED
         if(crtGAME_STATUS.equals("finished") && gameStats.getIsGameRunning()) {
+            showRoundFeedbackToast(dataSnapshot);
             gameStats.setIsGameRunning(false);
 
             String GAME_WINNER = "";
@@ -323,6 +327,31 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
 
         //if((crtPlayerNumber == 1 && PLAYER1_STATUS.equals("exited")) || (crtPlayerNumber == 2 && PLAYER2_STATUS.equals("exited")))
             //gameStats.setIsGameRunning(false);
+    }
+
+    public void showRoundFeedbackToast(DataSnapshot obj) {
+        String msg;
+        Toast toast;
+
+        if(gameStats.getCrtPlayerNumber() == 1 ) {
+            if(obj.child("GAME_PLAYER1_ROUND_MESSAGE").getValue() != null) {
+                msg = obj.child("GAME_PLAYER1_ROUND_MESSAGE").getValue().toString();
+                toast = Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 310);
+                toast.show();
+            }
+        }
+        if(gameStats.getCrtPlayerNumber() == 2) {
+            if(obj.child("GAME_PLAYER2_ROUND_MESSAGE").getValue() != null) {
+                msg = obj.child("GAME_PLAYER2_ROUND_MESSAGE").getValue().toString();
+                toast = Toast.makeText(getBaseContext(), msg, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL, 0, 310);
+                toast.show();
+            }
+        }
+
+
+
     }
 
     //Download the QuizzImage from Firebase Storage
