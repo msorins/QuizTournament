@@ -36,7 +36,7 @@ class GameStats implements Serializable {
     public static final String EXTRA = "com.mirceasorinsebastian.quiztournamentGameStats";
     private boolean isGameRunning;
     private int numberOfLetters, crtPlayerNumber;
-    private String gameMode, aiNickname, gameCategory;
+    private String gameMode, aiNickname, gameCategory, gameType;
 
     public boolean getIsGameRunning() {
         return this.isGameRunning;
@@ -85,6 +85,14 @@ class GameStats implements Serializable {
 
     public void setGameCategory(String value) {
         this.gameCategory = value;
+    }
+
+    public void setGameType(String value) {
+        this.gameType = value;
+    }
+
+    public String getGameType() {
+        return this.gameType;
     }
 }
 
@@ -161,7 +169,6 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
                 //If the user is currently in a room
                 if(crtRoomId.equals("Pending") || crtRoomId.equals("none")) {
                     Log.i("GameActivity status:", "User is NOT in a room");
-                    Log.i("146: setIsGameRunning(False)", "yeap");
                     if(gameStats.getIsGameRunning())
                         exitPlayer();
 
@@ -203,7 +210,7 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (!gameStats.getIsGameRunning()){
                     gameGetFromDB.removeEventListener(this);
-                    Log.i("FirebaseListenRoomInfo: ", "exited");
+                    Log.i("ListenRoomInfo: ", "exited");
                 }else {
                     try {
                         if(!waitRoomProcess)
@@ -252,6 +259,13 @@ public class GameActivity extends AppCompatActivity implements GameLoadingFragme
             gameStats.setGameCategory(dataSnapshot.child("GAME_CATEGORY").getValue().toString());
         else
             gameStats.setGameCategory("random");
+
+        if(dataSnapshot.child("GAME_TYPE").getValue() != null)
+            gameStats.setGameType(dataSnapshot.child("GAME_TYPE").getValue().toString());
+        else
+            gameStats.setGameType("");
+
+
 
         if(dataSnapshot.child("GAME_MODE").getValue() != null)
              gameStats.setGameMode(dataSnapshot.child("GAME_MODE").getValue().toString());

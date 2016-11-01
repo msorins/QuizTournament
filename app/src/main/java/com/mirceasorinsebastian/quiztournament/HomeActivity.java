@@ -136,7 +136,7 @@ public class HomeActivity extends AppCompatActivity
         startGameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startGame("random");
+                startGame("newGameTournamentEightRequest", "random");
             }
         });
 
@@ -206,7 +206,7 @@ public class HomeActivity extends AppCompatActivity
         });
     }
 
-    public void startGame(String category) {
+    public void startGame(String type, String category) {
         final FirebaseDatabase  database = FirebaseDatabase.getInstance();
 
         if(userStats.getUserQP() >= 10) {
@@ -217,7 +217,8 @@ public class HomeActivity extends AppCompatActivity
             DatabaseReference queueRef = database.getReference("queue");
 
             HashMap key = new HashMap(); HashMap key2 = new HashMap();
-            key2.put("type", "newGameTwoRequest");
+
+            key2.put("type", type);
             key2.put("QP", Integer.toString(userStats.getUserQP()));
             key2.put("ENTERTIME", String.valueOf(System.currentTimeMillis()));
             key2.put("CATEGORY", category);
@@ -286,7 +287,7 @@ public class HomeActivity extends AppCompatActivity
                         @Override
                         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                             Log.i("Clicked: ", "TRUE" + String.valueOf(i));
-                            startGame(catArrayList.get(i).getCategoryName());
+                            startGame("newGameTwoRequest", catArrayList.get(i).getCategoryName());
                         }
                     });
 

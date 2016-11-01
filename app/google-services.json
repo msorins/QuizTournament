@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "715576857925",
+    "firebase_url": "https://logoquizz-tournament.firebaseio.com",
+    "project_id": "logoquizz-tournament",
+    "storage_bucket": "logoquizz-tournament.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715576857925:android:161e4535a09986a5",
+        "android_client_info": {
+          "package_name": "com.mirceasorinsebastian.logoquizztournament"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715576857925-27jg22l7bjpufdg63be0j5eq12irbhn9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mirceasorinsebastian.logoquizztournament",
+            "certificate_hash": "ED24ECBE10EF4ECB5FDE3A303FEB79CFA309E24F"
+          }
+        },
+        {
+          "client_id": "715576857925-qrlju7evu6tn9437eu1ivm3jqd1518lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw9eZ13uC-ypsRdvGALOic-w-90bvXtUQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:715576857925:android:f006273f3b50f65f",
+        "android_client_info": {
+          "package_name": "com.mirceasorinsebastian.quiztournament"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "715576857925-kapf65kfei3jtbas60rk2topsgrehu49.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mirceasorinsebastian.quiztournament",
+            "certificate_hash": "ED24ECBE10EF4ECB5FDE3A303FEB79CFA309E24F"
+          }
+        },
+        {
+          "client_id": "715576857925-qrlju7evu6tn9437eu1ivm3jqd1518lv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCw9eZ13uC-ypsRdvGALOic-w-90bvXtUQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "715576857925-qrlju7evu6tn9437eu1ivm3jqd1518lv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

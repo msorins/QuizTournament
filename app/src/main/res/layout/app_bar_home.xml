@@ -42,7 +42,7 @@ android:paddingTop="0dp"
 tools:context="com.mirceasorinsebastian.quiztournament.MainActivity">
 
         <Button
-    android:text="Play random"
+    android:text="Tournament"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
             android:background="@color/colorPrimary"

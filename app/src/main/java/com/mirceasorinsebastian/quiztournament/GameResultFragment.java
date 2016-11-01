@@ -64,7 +64,8 @@ public class GameResultFragment extends Fragment {
         playAgainButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                playAgain(gameStats.getGameCategory());
+                //To change here
+                playAgain(gameStats.getGameType(), gameStats.getGameCategory());
             }
         });
 
@@ -92,14 +93,14 @@ public class GameResultFragment extends Fragment {
         void showLoading();
     }
 
-    public void playAgain(String category) {
+    public void playAgain(String type, String category) {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference queueRef = database.getReference("queue");
 
         if(userStats.getUserQP() >= 10) {
             HashMap key = new HashMap(); HashMap key2 = new HashMap();
 
-            key2.put("type", "newGameTwoRequest");
+            key2.put("type", type);
             key2.put("QP", Integer.toString(userStats.getUserQP()));
             key2.put("ENTERTIME", String.valueOf(System.currentTimeMillis()));
             key2.put("CATEGORY", category);
