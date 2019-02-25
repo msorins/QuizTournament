@@ -4,17 +4,16 @@
 [![](http://img.youtube.com/vi/Rxi7d6pLImM/0.jpg)](http://www.youtube.com/watch?v=Rxi7d6pLImM "Quiz Tournament Demo")
 
 ## Screens
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/0.png?raw=true "Demo Image")
+![Demo Image ](https://github.com/msorins/QuizTournament/blob/master/0.png?raw=true "Demo Image")
 
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/1.png?raw=true "Demo Image")
+![Demo Image ](https://github.com/msorins/QuizTournament/blob/master/1.png?raw=true "Demo Image")
 
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/2.png?raw=true "Demo Image")
+![Demo Image ](https://github.com/msorins/QuizTournament/blob/master/2.png?raw=true "Demo Image")
 
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/3.png?raw=true "Demo Image")
+![Demo Image ](https://github.com/msorins/QuizTournament/blob/master/3.png?raw=true "Demo Image")
 
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/4.png?raw=true "Demo Image")
+![Demo Image ](https://github.com/msorins/QuizTournament/blob/master/4.png?raw=true "Demo Image")
 
-![Demo Image ](https://github.com/msorins/HexaXAnd0/blob/QuizTournament/5.png?raw=true "Demo Image")
 
 # Idea
 A multiplayer quizz app. Initially it should have contained only logo quizzes,but then it spread across multiple categories.
