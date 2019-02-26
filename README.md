@@ -16,22 +16,22 @@
 
 
 # Idea
-A multiplayer quizz app. Initially it should have contained only logo quizzes,but then it spread across multiple categories.
+A multiplayer quiz app. Initially it should have contained only logo quizzes,but then it spread across multiple categories.
 
-All the quizz battles happen between two players, but if another opponent doesn't join soon, silently an in-game robot is going to take over.
+All the quiz battles happen between two players, but if another opponent doesn't join soon, silently an in-game robot is going to take over.
 
 Users can contribute to the pool of questions directly from the application (only after the submitted quizzes are going to be evaluated from a web admin panel)
 
 # How does it work
 
-The server is waiting for players to join the que and then it places them into a room. Depending on the player's status and action the room is going to cycle through the following events:
+The server is waiting for players to join the queue and then it places them into a room. Depending on the player's status and action the room is going to cycle through the following events:
 
 * *waitingForPlayers*: until two players join the room
-* *preparing*: while the phone is internally loading all the quizz data
+* *preparing*: while the phone is internally loading all the quiz data
 * *ready*: everything is ready for the round to start
 * *running*: in-round time
 * *done*: after both players have submitted a result or the time has passed, if there have been 5 rounds, the game will finish, otherwise it will cycle back to *preparing*
-* *finished*: show end game screen with final results (containg the acquired points)
+* *finished*: show end game screen with final results (contains the acquired points)
 
 Firebase is used as a real time database and the players phone are going to subscribe to changes in their assigned game room.
 
